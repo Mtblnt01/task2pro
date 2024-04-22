@@ -16,7 +16,7 @@
         <textarea name="" id="input" cols="30" rows="10"></textarea>
         <br>
         <button id="button1" class="is-danger" pys-onclick="clear">Clear</button>
-        <button id="button2" class="is-primary">Length</button>
+        <button id="button2" class="is-primary" pys-onclick="length">Length</button>
         <button id="button3" class="is-primary">Upper case</button>
         <button id="button4" class="is-primary">Lowercase</button>
         <button id="button5" class="is-primary"></button>
@@ -31,9 +31,16 @@
 input = document.getElementById("input")
 output = document.getElementById("output")
 
+def length(*args):
+    inputLength = len(input.value)
+    result = f'The text is {inputLength} characters.'
+    console.log(result)
+    output.innerText = result
+  
 def clear(*args):
     input.value=''
     output.innerText='Output'
+  
 </py-script>
 </body>
 
