@@ -15,8 +15,8 @@
         <h1>Text manipulation with PyScript</h1>
         <textarea name="" id="input" cols="30" rows="10"></textarea>
         <br>
-        <button id="button1" class="is-danger" pys-onlcick="clear">Clear</button>
-        <button id="button2" class="is-primary" pys-onlcick="length">Length</button>
+        <button id="button1" class="is-danger" pys-onclick="clear">Clear</button>
+        <button id="button2" class="is-primary" pys-onclick="length">Length</button>
         <button id="button3" class="is-primary">Upper case</button>
         <button id="button4" class="is-primary">Lowercase</button>
         <button id="button5" class="is-primary"></button>
@@ -28,6 +28,12 @@
     </div>
 <py-script>
 #application logic
+
+def length(*args):
+    inputLength = len(input.value)
+    result = f'The text is {inputLength} characters.'
+    console.log(result)
+    output.innerText = result
 
 </py-script>
 </body>
